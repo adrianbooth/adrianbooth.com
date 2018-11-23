@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Alexa.NET;
+using Alexa.NET.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace adrianbooth.com.Controllers
@@ -7,10 +8,10 @@ namespace adrianbooth.com.Controllers
     [Route("api/[controller]")]
     public class HelloPeterController : Controller
     {
+
         [HttpPost]
-        public dynamic Post(dynamic value)
+        public dynamic Post(SkillRequest input)
         {
-            Trace.WriteLine(value, "request");
             return ResponseBuilder.Tell("Peter is the best baby.");
         }
     }
