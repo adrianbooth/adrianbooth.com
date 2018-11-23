@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>A simple .NET Core library for handling Alexa Skill request/responses.</Description>
+    <AssemblyTitle>Alexa.NET</AssemblyTitle>
+    <VersionPrefix>1.5.5</VersionPrefix>
+    <Authors>Tim Heuer, Steven Pears</Authors>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>Alexa.NET</AssemblyName>
+    <PackageId>Alexa.NET</PackageId>
+    <PackageTags>amazon;alexa;echo;dot;echo dot;skills</PackageTags>
+    <PackageReleaseNotes>Added Polly Voice support - https://developer.amazon.com/blogs/alexa/post/baee53c1-5b03-4580-b57a-ee9510413354/amazon-polly-voices-in-alexa-skills-now-generally-available</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/timheuer/alexa-skills-dotnet</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/timheuer/alexa-skills-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/timheuer/alexa-skills-dotnet</RepositoryUrl>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+</Project>
