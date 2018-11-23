@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Alexa.NET;
 using Alexa.NET.Request;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace adrianbooth.com.Controllers
 {
@@ -11,15 +12,17 @@ namespace adrianbooth.com.Controllers
     {
 
         [HttpPost]
-        public dynamic Post(SkillRequest input)
+        public dynamic Post(SkillRequest request)
         {
             var index = DateTime.UtcNow.Ticks % 7;
+            Log.Debug("request received {request}", request);
+
             string[] responses = {
                 "Peter is the best baby",
                 "Peter is the best baby",
                 "Peter is the best baby",
                 "Love you Peter",
-                "da ya likee dags",
+                "do ya like dags",
                 "Jakes farts melt steel beams",
                 "He's a bad baby"
             };
