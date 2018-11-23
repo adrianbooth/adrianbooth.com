@@ -1,4 +1,5 @@
-﻿using Alexa.NET;
+﻿using System.Diagnostics;
+using Alexa.NET;
 using Microsoft.AspNetCore.Mvc;
 
 namespace adrianbooth.com.Controllers
@@ -9,7 +10,8 @@ namespace adrianbooth.com.Controllers
         [HttpPost]
         public dynamic Post(dynamic value)
         {
-           return ResponseBuilder.Tell("Peter is the best baby.");
+            Trace.WriteLine(value, "request");
+            return ResponseBuilder.Tell("Peter is the best baby.");
         }
     }
 }
